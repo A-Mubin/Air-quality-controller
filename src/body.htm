@@ -1,0 +1,76 @@
+<h2>
+	ESP32 Room ambiance control
+</h2>
+<p class="line1">
+	<i class="fas fa-thermometer-half logo" style="color: #059e8a"></i>
+	<span class="keep-left">Temperature</span>
+	<span class="keep-right"><span id="temperature" class="threshVals">%TEMPERATURE%</span>
+		<sup class="units">&deg;C</sup>
+	</span>
+</p>
+<p class="line1">
+	<i class="fas fa-tint logo" style="color: #059e8a"></i>
+	<span class="keep-left">Humidity</span>
+	<span class="keep-right"><span id="humidity" class="threshVals">%HUMIDITY%</span>
+		<sup class="units">&percnt;</sup>
+	</span></span>
+</p>
+<p class="line1">
+	<i class="fas fa-atom logo" style="color: #059e8a"></i>
+	<span class="keep-left">AQI(CO2)</span>
+	<span class="keep-right"><span id="AQI" class="threshVals">%AQI%</span>
+		<sup class="units">ppm</sup>
+	</span></span>
+</p>
+<p class="line1">
+	<i class="fas fa-wind logo" style="color: #059e8a"></i>
+	<span class="keep-left">Fan status</span>
+	<span class="keep-right"><span id="FanStatus" class="threshVals">%FANSTATUS%</span>
+	</span>
+</p>
+<h2>
+	<b>Threshhold values for activating fan</b>
+</h2>
+<p class="line1">
+	<i class="fas fa-thermometer-half logo" style="color: #059e8a"></i>
+	<span class="keep-left">Threshhold temperature : </span>
+	<span class="keep-right"><span id="threshTemp" class="threshVals">%THRESHTEMP%</span>&deg;C</span>
+</p>
+<p class="line1">
+	<i class="fas fa-tint logo" style="color: #059e8a"></i>
+	<span class="keep-left">Threshhold humidity : </span>
+	<span class="keep-right"><span id="threshHumidity" class="threshVals">%THRESHHUMIDITY%</span>&percnt;</span>
+</p>
+<p class="line1">
+	<i class="fas fa-atom logo" style="color: #059e8a"></i>
+	<span class="keep-left">Threshhold CO2 : </span>
+	<span class="keep-right"><span id="threshCO" class="threshVals">%THRESHCO%</span> ppm</span>
+</p>
+<h2>
+	<b>Threshhold values for activating fan</b>
+</h2>
+<form action="/get" id="frm1">
+	<p class="line1">
+		<i class="fas fa-thermometer-half logo" style="color: #059e8a"></i>
+		<span class="keep-left">Threshhold temperature : </span>
+		<span class="keep-right"><input type="text" name="threshT"> &deg;C </span>
+	</p>
+	<p class="line1">
+		<i class="fas fa-tint logo" style="color: #059e8a"></i>
+		<span class="keep-left">Threshhold humidity : </span>
+		<span class="keep-right"><input type="text" name="threshH"> &percnt; </span>
+	</p>
+	<p class="line1">
+		<i class="fas fa-atom logo" style="color: #059e8a"></i>
+		<span class="keep-left">Threshhold CO2 : </span>
+		<span class="keep-right"><input type="text" name="threshCO2"> ppm </span>
+	</p>
+	<p>
+		<input type="button" value="Set" onclick="formSubmit()"
+			style="background-color: green; min-width:50%;text-align:center;">
+	</p>
+
+</form>
+<h2 id="submitStatus">
+
+</h2>
